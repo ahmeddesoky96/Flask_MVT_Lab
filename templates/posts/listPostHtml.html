@@ -1,0 +1,35 @@
+{% extends './main.html' %}
+
+{% block title %}
+List Post
+{% endblock %}
+
+{% block header %}
+Your Posts
+{% endblock %}
+{% block body %}
+<table style="width: 100%; margin-left: 50px;" border="" border-between="">
+    <tr>
+        <th class="text-center my-3 border border-black">ID</th>
+        <th class="text-center my-3 border border-black">title</th>
+        <th class="text-center my-3 border border-black">Choise</th>
+        
+    </tr>
+    {% for post in posts %}
+        <tr>
+            <td class="text-center my-3 px-2 border">{{post.id}}</td>
+            <td class="text-center my-3 px-5 border">{{post.title}}</td>
+            <td class="text-center my-3 border p-0">
+                <a href="{{url_for('posts.postDisplay',id=post['id'])}}" class=" mx-2 border" >Display</a>
+                <a href="{{url_for('posts.postUpdate',id=post['id'])}}" class=" mx-2 border" >Update</a>
+                <a href="{{url_for('posts.postDelete',id=post['id'])}}" class=" mx-2 border" >Delete</a>
+            </td>
+            
+        </tr>
+        
+    {% endfor %}
+
+</table>
+<br>
+       
+{% endblock %}

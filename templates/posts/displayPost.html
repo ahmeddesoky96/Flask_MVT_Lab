@@ -1,0 +1,26 @@
+{% extends './main.html' %}
+
+{% block title %}
+Display Post
+{% endblock %}
+
+{% block header %}
+Your Post
+{% endblock %}
+{% block body %}
+<div class="container bg-info p-5 text-left">
+            <h2>id : {{myPost.id}} </h2>
+            <hr>
+            <h2>title : {{myPost.title}} </h2>
+            <hr>
+            <h2>body : {{myPost.body}} </h2>
+            <hr>
+            <img src="{{url_for('static',filename='hiring1.jpg')}}" alt=""/>
+            
+            
+        </div>
+        <a href="{{url_for('posts.postList')}}" class=" " >
+            <button class="btn btn-secondary mx-5">Back To List</button>
+            </button>
+        </a>
+{% endblock %}
