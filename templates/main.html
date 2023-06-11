@@ -28,15 +28,15 @@
         {% block body %}
         <h2 class="text-dark m-3">What would u like to Pick ?</h2>
         <div class="container m-5 p-5 w-100 text-center">
-            <!-- <a href="{{url_for('addPost')}}" class=" " > -->
+            <a href="{{url_for('posts.postAdd')}}" class=" " >
                 <button class="btn btn-secondary mx-5">Add Post</button>
                 </button>
             </a>
 
-            <!-- <a href="{{url_for('listPost')}}" class=" "  >
+            <a href="{{url_for('posts.postList')}}" class=" "  >
                 <button class="btn btn-success mx-5">List Posts</button>
                 </button>
-            </a> -->
+            </a>
                 
         </div>
         {% endblock %}

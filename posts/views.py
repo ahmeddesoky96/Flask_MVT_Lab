@@ -3,6 +3,14 @@ from blog_mvt.posts.bluePrintPosts import postBlueprint
 from flask import render_template,redirect,request,url_for
 
 
+
+#######main page#######
+
+def firstPage():
+    
+    return render_template("main.html")
+
+
 #######3 view all posts########
 @postBlueprint.route("",endpoint='postList')
 def listPost():
